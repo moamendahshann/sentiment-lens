@@ -1,0 +1,1 @@
+{"name":"sentiment-lens","version":"1.0.0","private":true,"type":"module","engines":{"node":">=24"},"scripts":{"train":"node scripts/train.mjs","test":"node --test tests/*.test.mjs","start":"node scripts/serve.mjs","build":"node scripts/build.mjs"}}

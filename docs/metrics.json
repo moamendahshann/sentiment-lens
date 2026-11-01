@@ -1,0 +1,181 @@
+{
+  "dataset": "UCI Sentiment Labelled Sentences",
+  "datasetDOI": "10.24432/C57604",
+  "seed": 42,
+  "rawSamples": 3000,
+  "uniqueSamples": 2969,
+  "duplicateRows": 31,
+  "conflictingKeys": 0,
+  "split": {
+    "train": 2085,
+    "development": 442,
+    "test": 442
+  },
+  "selection": {
+    "C": 2,
+    "trials": [
+      {
+        "C": 2,
+        "accuracy": 0.8280542986425339,
+        "macroF1": 0.8279979518689196,
+        "logLoss": 0.44749306176326237
+      },
+      {
+        "C": 0.5,
+        "accuracy": 0.8257918552036199,
+        "macroF1": 0.8257695595861554,
+        "logLoss": 0.5397588378041753
+      },
+      {
+        "C": 8,
+        "accuracy": 0.8167420814479638,
+        "macroF1": 0.8166285090886741,
+        "logLoss": 0.4022610640304971
+      }
+    ]
+  },
+  "test": {
+    "samples": 442,
+    "accuracy": 0.8416289592760181,
+    "macroF1": 0.8415478531628974,
+    "logLoss": 0.4298747521826307,
+    "confusionMatrix": [
+      [
+        191,
+        30
+      ],
+      [
+        40,
+        181
+      ]
+    ],
+    "errors": [
+      {
+        "text": "I tried talking real loud but shouting on the telephone gets old and I was still told it wasn't great.",
+        "label": 0,
+        "source": "amazon",
+        "key": "i tried talking real loud but shouting on the telephone gets old and i was still told it wasnt great",
+        "predicted": 1,
+        "positiveScore": 0.6805047377232817
+      },
+      {
+        "text": "Not good enough for the price.",
+        "label": 0,
+        "source": "amazon",
+        "key": "not good enough for the price",
+        "predicted": 1,
+        "positiveScore": 0.5635304909485571
+      },
+      {
+        "text": "This is infuriating.",
+        "label": 0,
+        "source": "amazon",
+        "key": "this is infuriating",
+        "predicted": 1,
+        "positiveScore": 0.7019143909106053
+      },
+      {
+        "text": "It's so stupid to have to keep buying new chargers, car chargers, cradles, headphones and car kits every time a new phone comes out.",
+        "label": 0,
+        "source": "amazon",
+        "key": "its so stupid to have to keep buying new chargers car chargers cradles headphones and car kits every time a new phone comes out",
+        "predicted": 1,
+        "positiveScore": 0.5570276092117509
+      },
+      {
+        "text": "Having trouble with volume.",
+        "label": 0,
+        "source": "amazon",
+        "key": "having trouble with volume",
+        "predicted": 1,
+        "positiveScore": 0.5056652292069616
+      },
+      {
+        "text": "I am sorry I made this purchase.",
+        "label": 0,
+        "source": "amazon",
+        "key": "i am sorry i made this purchase",
+        "predicted": 1,
+        "positiveScore": 0.5147279046482687
+      },
+      {
+        "text": "We have tried 2 units and they both failed within 2 months.. Pros",
+        "label": 0,
+        "source": "amazon",
+        "key": "we have tried 2 units and they both failed within 2 months pros",
+        "predicted": 1,
+        "positiveScore": 0.6394626972199586
+      },
+      {
+        "text": "I did not have any problem with this item and would order it again if needed.",
+        "label": 1,
+        "source": "amazon",
+        "key": "i did not have any problem with this item and would order it again if needed",
+        "predicted": 0,
+        "positiveScore": 0.26736388941545874
+      },
+      {
+        "text": "But it does get better reception and clarity than any phone I've had before.",
+        "label": 1,
+        "source": "amazon",
+        "key": "but it does get better reception and clarity than any phone ive had before",
+        "predicted": 0,
+        "positiveScore": 0.49452535378679946
+      },
+      {
+        "text": "I can hear while I'm driving in the car, and usually don't even have to put it on it's loudest setting.",
+        "label": 1,
+        "source": "amazon",
+        "key": "i can hear while im driving in the car and usually dont even have to put it on its loudest setting",
+        "predicted": 0,
+        "positiveScore": 0.3340971886326709
+      },
+      {
+        "text": "Phone now holds charge like it did when it was new.",
+        "label": 1,
+        "source": "amazon",
+        "key": "phone now holds charge like it did when it was new",
+        "predicted": 0,
+        "positiveScore": 0.42872232007915606
+      },
+      {
+        "text": "Protects the phone on all sides.",
+        "label": 1,
+        "source": "amazon",
+        "key": "protects the phone on all sides",
+        "predicted": 0,
+        "positiveScore": 0.4866539449420977
+      }
+    ]
+  },
+  "majorityBaselineAccuracy": 0.5,
+  "leaveOneDomainOut": [
+    {
+      "heldOutDomain": "amazon",
+      "C": 8,
+      "samples": 981,
+      "accuracy": 0.7747196738022426,
+      "macroF1": 0.7747187374331979
+    },
+    {
+      "heldOutDomain": "imdb",
+      "C": 8,
+      "samples": 994,
+      "accuracy": 0.704225352112676,
+      "macroF1": 0.6993951612903226
+    },
+    {
+      "heldOutDomain": "yelp",
+      "C": 2,
+      "samples": 994,
+      "accuracy": 0.761569416498994,
+      "macroF1": 0.7612018063587477
+    }
+  ],
+  "dataSha256": {
+    "amazon_cells_labelled.txt": "47003fc0a0d4840b00e96e715b6189bad09e7443a3da41c4cbe12ffc79f86ae3",
+    "imdb_labelled.txt": "aef2e49e3da25714d61175e3a6e68eeef74a20a2f914318dc3be9947ea86512d",
+    "yelp_labelled.txt": "c76468b7b5c6e56a0804d728345c5f84aa2142ddb214420f61cc9cfd4c00d2ea"
+  },
+  "protocol": "C selected on development macro F1; vocabulary and final model refitted on train+development only. Test evaluated after selection. Each held-out-domain run retunes using only the other domains."
+}
